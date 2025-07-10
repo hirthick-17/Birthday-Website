@@ -5,11 +5,13 @@ import DiaryCard from './components/DiaryCard';
 import ScrollIndicator from './components/ScrollIndicator';
 import PoemSection from './components/PoemSection';
 import FinalSection from './components/FinalSection';
+import AnimatedImageTransition from './components/AnimatedImageTransition';
 import { useIntersectionObserver } from './hooks/useIntersectionObserver';
 
 function App() {
   const [showMainContent, setShowMainContent] = useState(false);
   const [showBirthdayWish, setShowBirthdayWish] = useState(true);
+  const [showImageTransition, setShowImageTransition] = useState(false);
   
   const [poemSectionRef, isPoemSectionVisible] = useIntersectionObserver({
     threshold: 0.3,
@@ -22,11 +24,17 @@ function App() {
   });
 
   const handleBirthdayWishComplete = () => {
-    setShowMainContent(true);
-    // Hide the birthday wish after a longer delay to ensure smooth transition
+    setShowImageTransition(true);
     setTimeout(() => {
       setShowBirthdayWish(false);
-    }, 1500);
+    }, 1000);
+  };
+
+  const handleImageTransitionEnd = () => {
+    setShowMainContent(true);
+    setTimeout(() => {
+      setShowImageTransition(false);
+    }, 500);
   };
 
   useEffect(() => {
@@ -47,7 +55,10 @@ function App() {
       {showBirthdayWish && (
         <BirthdayWish onAnimationComplete={handleBirthdayWishComplete} />
       )}
-
+      {/* Animated Image Transition */}
+      {showImageTransition && (
+        <AnimatedImageTransition onAnimationEnd={handleImageTransitionEnd} />
+      )}
       {/* Main Content */}
       <div className={`transition-all duration-1000 ease-in-out ${showMainContent ? 'opacity-100' : 'opacity-0'}`}>
         {/* Page 1: Introduction & Personal Touch */}
@@ -57,22 +68,18 @@ function App() {
             <div className="mb-16">
               <ImageWall isVisible={showMainContent} />
             </div>
-
             {/* Diary Card */}
-            <div className="mb-16">
+            <div className={`mb-16 transition-opacity duration-1000 ${showMainContent ? 'opacity-100' : 'opacity-0'}`}>
               <DiaryCard isVisible={showMainContent} />
             </div>
-
             {/* Scroll Indicator */}
             <ScrollIndicator isVisible={showMainContent} />
           </div>
         </div>
-
         {/* Page 2: Poems from the Heart */}
         <div ref={poemSectionRef}>
           <PoemSection isVisible={isPoemSectionVisible} />
         </div>
-
         {/* Page 3: Final Section with Image and Message */}
         <div ref={finalSectionRef}>
           <FinalSection isVisible={isFinalSectionVisible} />

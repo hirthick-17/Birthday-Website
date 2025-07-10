@@ -22,29 +22,29 @@ const PoemSection: React.FC<PoemSectionProps> = ({ isVisible }) => {
 
     try {
       const mockPoems = [
-        "In your eyes, I see my future bright,\nWith you, every day feels so right.\nYour smile melts my heart away,\nHappy Birthday, love, this special day.",
+        "Un Anbu endru oru Aruvi\n Athey thedi parakum intha Kuruvi\n Un kadhale athai theda Karuvi\n Athu kedaikuma intha oru Piravii",
         
-        "Like flowers bloom in morning dew,\nMy heart opens wide for you.\nIn your laugh, I find my peace,\nMay your joy never cease.",
+        "Un nenapula kadhala thedi\nUnna paka vanthen nanum odi\nUnna odane pakanum vaadi\n Enna ne tha enoda jodi",
         
-        "Dancing through life hand in hand,\nTogether we make the perfect band.\nYour love is my sweetest song,\nWith you is where I belong.",
+        "Un alagai matum en vai pesum\nEnaku Iruku unmela athigama pasam\n Namma onna irukurom sila masam \nIpdiye irunthuta elame awesome ",
         
-        "Stars above pale next to you,\nYour beauty shines in all you do.\nEvery moment spent with you,\nMakes my wildest dreams come true.",
+        "Un kanngalil nan kanden oru Kadhal\n Athu vendum endrum en manam epothum Thedal\n Unnoda senthu pada vendum 1000 padhal\n Athai keka vendum nam iruduvarai sendral",
         
-        "Coffee tastes better with your kiss,\nEvery morning filled with bliss.\nYour presence makes my soul complete,\nLife with you is oh so sweet.",
+        "Namma dream destination swissuhh\nWill you be my miss uhh\nI will never feel you missuuuu\nAnd i will give lots of kissuuu",
         
-        "In your arms, I've found my home,\nNo more shall my heart roam.\nYour love guides me through each day,\nIn your heart, I want to stay.",
+        "Namma ooruku pogalam Franceuhhh\n unna forever sight adipen glance uhh \n Will you give me a chance uhhh \n Let us make some dance uhhh",
         
-        "Like puzzle pieces, we fit right,\nYou make my darkness turn to light.\nWith every breath, I love you more,\nYou're everything I'm living for.",
+        "Unna patha odane vanthuchi love uhh\n Na oru loosu ana stove uhhh \n Namma onna parakalam like dove uhhhh \n I always be your glove uhhhh",
         
-        "Your laughter is my favorite sound,\nIn your love, I am found.\nEvery day with you's a gift,\nMy spirits, you always lift.",
+        "Unkuda spend panra Time uhh\n It's feel like sweet lime uhh \n Unna miss panrathu crime uhhh \n I will give you my prime uhhh",
         
-        "Through seasons change and years go by,\nOur love will reach up to the sky.\nYou are my sun, my moon, my star,\nPerfect just the way you are.",
+        "Loving you is the best\n You are owner of my chest\n I will go down till earth crust \n For having you till the rest",
         
-        "In this world of endless noise,\nYou are my heart's favorite voice.\nWith you, life's an endless dance,\nBlessed by this sweet romance.",
+        "First ne enoda crush uhh \n Ipo en life a paint panna brush uhhh \n Unkuda pesuna enaku varum blushhh uhhh \n Na iruka try panran like lord krishhhhh",
         
-        "Your touch ignites my very soul,\nWith you, I feel completely whole.\nEvery kiss, a sweet surprise,\nParadise within your eyes.",
+        "Un Alagiya Per thaney Bhavana\n Unnai maranthu Nanu vitu povana \n Un arugil Irupen nan Ramana \n Ne ilamal pona Nan Savana",
         
-        "Today we celebrate your birth,\nAn angel walking on this earth.\nMy love for you will never end,\nMy lover, partner, and best friend."
+        "Un kanna patha feels like Moon\n Namma success aguvom will be Soon\n Unna pathi nenaipan even in Noon\n Propose panna apo vanthuchi Tycoon"
       ];
 
       // Simulate API delay
@@ -96,7 +96,7 @@ const PoemSection: React.FC<PoemSectionProps> = ({ isVisible }) => {
       <div className="max-w-7xl mx-auto px-4">
         <div className={`text-center mb-16 transition-all duration-1000 ease-in-out ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-handwriting font-bold text-hotpink mb-4">
-            Poems From My Heart to Yours
+            Kavithai About my Panjumuttai
           </h2>
           <Heart className="text-hotpink mx-auto mb-8" size={40} />
         </div>

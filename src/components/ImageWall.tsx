@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
+import img1 from '../Assets/Image-Gallery/WhatsApp Image 2025-07-08 at 21.28.31_936c1eb7.jpg';
+import img2 from '../Assets/Image-Gallery/WhatsApp Image 2025-07-08 at 21.28.32_005668a5.jpg';
+import img3 from '../Assets/Image-Gallery/WhatsApp Image 2025-07-08 at 21.28.32_ad257de8.jpg';
+import img4 from '../Assets/Image-Gallery/WhatsApp Image 2025-07-10 at 13.06.18_29acb5db.jpg';
+
 interface ImageWallProps {
   isVisible: boolean;
 }
@@ -18,24 +23,24 @@ const ImageWall: React.FC<ImageWallProps> = ({ isVisible }) => {
 
   const images = [
     {
-      src: 'https://placehold.co/300x300/fce7f3/FF69B4?text=Our+First+Date',
-      title: 'Our First Date',
-      description: 'The moment that started it all ✨'
+      src: img1,
+      title: 'Our Second Date',
+      description: 'Marina Mall Date live la marakave mudiyatha romba special ana moment'
     },
     {
-      src: 'https://placehold.co/300x300/fce7f3/FF69B4?text=Adventures+Together',
-      title: 'Adventures Together',
-      description: 'Every journey with you is magical 🌟'
+      src: img2,
+      title: 'Pongal apo Duet uhhh',
+      description: 'Namma rendu perum intha mari photoshoot pannuvom nu kanavula kuda expect pannala'
     },
     {
-      src: 'https://placehold.co/300x300/fce7f3/FF69B4?text=Cozy+Moments',
-      title: 'Cozy Moments',
-      description: 'Home is wherever you are 🏡'
+      src: img3,
+      title: 'Panjumuttaiyum Paradesiyum',
+      description: 'Rendu Perum intha mari enaku ne unaku na nu epome irukanum dii'
     },
     {
-      src: 'https://placehold.co/300x300/fce7f3/FF69B4?text=Celebrating+Us',
-      title: 'Celebrating Us',
-      description: 'Every day with you is a celebration 🎉'
+      src: img4,
+      title: 'Lifting the Statue of Cuteness',
+      description: 'Serious a soldran antha photo la irukura mari unoda siripa na lifelong pakanum Bhavana'
     }
   ];
 
